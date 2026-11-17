@@ -1,0 +1,113 @@
+:root {
+  /* Color Palette */
+  --champagne-gold: #D4AF77;
+  --ivory: #FFFDF7;
+  --soft-cream: #F8F1E7;
+  --dusty-rose: #D8A7A7;
+  --deep-burgundy: #642D3D;
+  --warm-white: #FFFFFF;
+  --text-dark: #333333;
+  --text-light: #666666;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-text: 'Cormorant Garamond', serif;
+  --font-script: 'Great Vibes', cursive;
+  --font-body: 'Montserrat', sans-serif;
+
+  /* Spacing & Layout */
+  --section-padding: 100px 5%;
+  --max-width: 1200px;
+  --border-radius: 8px;
+  --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--ivory);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  color: var(--deep-burgundy);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section-subtitle {
+  font-family: var(--font-script);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--champagne-gold);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: var(--section-padding);
+  position: relative;
+}
+
+/* Elegant Button Styles */
+.btn-primary {
+  display: inline-block;
+  padding: 14px 36px;
+  background: linear-gradient(135deg, var(--champagne-gold), var(--dusty-rose));
+  color: var(--warm-white);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(212, 175, 119, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 175, 119, 0.5);
+  background: linear-gradient(135deg, var(--dusty-rose), var(--champagne-gold));
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--soft-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--champagne-gold);
+  border-radius: 10px;
+}

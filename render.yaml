@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: rosemary-stephen-wedding
+    runtime: node
+    buildCommand: npm --prefix backend ci --omit=dev
+    startCommand: npm --prefix backend start
+    healthCheckPath: /api/health
